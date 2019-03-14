@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+	<title>Ng-src y ng-cloak</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+		.circular{
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body ng-controller="AppCtrl">
+	<ul class="no-list">
+		<li ng-repeat="repo in repos">
+			<div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
+			<h1>{{repo.name}}</h1>
+		</li>
+	</ul>
+</body>
+</html>

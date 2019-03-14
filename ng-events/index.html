@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Mi primera página en AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<style type="text/css">
+		.hover{
+			background-color: rgb(200, 50, 50);
+		}
+		.no-hover{
+			background-color: rgb(50, 200, 50);
+		}
+	</style>
+</head>
+<body>
+	<button ng-click="bandera = !bandera" ng-class="{'hover': bandera, 'no-hover': !bandera}">
+		Hover me
+	</button><span ng-show="bandera">&lt;- click me</span>
+	<p>
+		{{bandera | json}}
+	</p>
+</body>
+</html>
